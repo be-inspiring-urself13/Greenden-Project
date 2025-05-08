@@ -33,7 +33,7 @@
     <img class="filter brightness-200" src="./Images/top-logo.png" alt="top-logo">
     <!-- <h1 class="text-green-900 text-4xl pl-10 pt-4 italic ">GREENDEN</h1> -->
 
-    <div class="flex justify-center items-center h-20 w-1/4 md:hidden" onclick="toggleMenu()">
+    <div class="flex justify-center items-center h-20 w-1/4 md:hidden" onclick="togglemenu()">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="text-white h-10 w-3/6 transition duration-500 hover:text-green-800  cursor-pointer">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -64,6 +64,9 @@
 
     <div id="mobile-div"
       class="h-svh w-2/5 flex flex-col items-center gap-3.5 fixed top-20 right-0 z-30 bg-red-200 bg-opacity-95 transform translate-x-full transition duration-500 ease-in-out p-4 lg:hidden">
+      <div class="absolute right-10">
+        <p class="inline font-semibold cursor-pointer hover:text-green-800" onclick="closeup()">X</p>
+      </div>
       <a href="./index.html"
         class="p-2 w-20 text-center text-black rounded-md border border-green-800 transition duration-500 hover:text-white hover:bg-green-800 ">Home</a>
       <a href="./product.html"
@@ -98,4 +101,6 @@
         src="./Images/top-logo.png" alt="top-logo" class="absolute right-0 bottom-0 filter brightness-200"> </p>
 
   </section>
+  <script src="video.js"></script>
 </body>
+</html>

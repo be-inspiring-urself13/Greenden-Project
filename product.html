@@ -9,33 +9,14 @@
 
     <!-- Tailwind CSS CDN LINK -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-
-    <script>
-        function toggleMenu() {
-            let mobileMenu = document.getElementById("mobile-div");
-            mobileMenu.classList.toggle("translate-x-0");
-            mobileMenu.classList.toggle("translate-x-full");
-        }
-
-        function popUp() {
-            let popUpData = document.getElementById("popUp");
-            popUpData.style.display = "flex";
-        }
-        function closePopUp() {
-            let popUpData = document.getElementById("popUp");
-            popUpData.style.display = "none";
-        }
-
-    </script>
 </head>
 
 <body>
     <!-- Responsive Navbar -->
     <nav class="bg-red-300 w-full h-20 shadow-xl flex justify-between z-10 sticky top-0">
         <img class="filter brightness-200" src="./Images/top-logo.png" alt="top-logo">
-        <!-- <h1 class="text-green-900 text-4xl pl-10 pt-4 italic ">GREENDEN</h1> -->
 
-        <div class="flex justify-center items-center h-20 w-1/4 md:hidden " onclick="toggleMenu()">
+       <div class="flex justify-center items-center h-20 w-1/4 md:hidden" onclick="togglemenu()">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor"
                 class="text-white h-10 w-3/6 transition duration-500 hover:text-green-800  cursor-pointer">
@@ -66,8 +47,11 @@
         </div>
 
         <div id="mobile-div"
-            class="h-svh w-2/5 flex flex-col items-center gap-3.5 fixed top-20 right-0 z-30 bg-red-200 bg-opacity-95 transform translate-x-full transition duration-500 ease-in-out p-4 lg:hidden">
-            <a href="./index.html"
+           class="h-svh w-2/5 flex flex-col items-center gap-3.5 fixed top-20 right-0 z-30 bg-red-200 bg-opacity-95 transform translate-x-full transition duration-500 ease-in-out p-4 md:hidden">
+           <div class="absolute right-10">
+            <p class="inline font-semibold cursor-pointer hover:text-green-800" onclick="closeup()">X</p>
+          </div> 
+           <a href="./index.html"
                 class="p-2 w-20 text-center text-black rounded-md border border-green-800 transition duration-500 hover:text-white hover:bg-green-800 ">Home</a>
             <a href="./product.html"
                 class="p-2 w-20  text-center text-black rounded-md transition duration-500 hover:text-white hover:bg-green-800">Products</a>
@@ -155,20 +139,8 @@
                 src="./Images/top-logo.png" alt="top-logo" class="absolute right-0 bottom-0 filter brightness-200"> </p>
 
     </section>
-    <script>
-        function filterProducts() {
-            const searchInput = document.getElementById('searchInput').value.toLowerCase();
-            const products = document.querySelectorAll('.product-item');
-            products.forEach(product => {
-                const productName = product.querySelector('h1').textContent.toLowerCase();
-                if (productName.includes(searchInput)) {
-                    product.style.display = '';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
-    </script>
+   
+    <script src="product.js"></script>
 </body>
 
 </html>

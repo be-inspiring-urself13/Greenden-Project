@@ -9,38 +9,19 @@
 
   <!-- Tailwind CSS CDN LINK -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-
-  <script>
-    function toggleMenu() {
-      let mobileMenu = document.getElementById("mobile-div");
-      mobileMenu.classList.toggle("translate-x-0");
-      mobileMenu.classList.toggle("translate-x-full");
-    }
-
-    function popUp() {
-      let popUpData = document.getElementById("popUp");
-      popUpData.style.display = "flex";
-    }
-    function closePopUp() {
-      let popUpData = document.getElementById("popUp");
-      popUpData.style.display = "none";
-    }
-
-  </script>
 </head>
 
 <body>
   <!-- Responsive Navbar -->
   <nav class="bg-red-300 w-full h-20 shadow-xl flex justify-between z-10 sticky top-0">
     <img class="filter brightness-200" src="./Images/top-logo.png" alt="top-logo">
-    <!-- <h1 class="text-green-900 text-4xl pl-10 pt-4 italic ">GREENDEN</h1> -->
 
-    <div class="flex justify-center items-center h-20 w-1/4 md:hidden" onclick="toggleMenu()">
+    <div class="flex justify-center items-center h-20 w-1/4 md:hidden" onclick="togglemenu()">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="text-white h-10 w-3/6 transition duration-500 hover:text-green-800  cursor-pointer">
+        class="text-white max-h-10 w-3/6 transition duration-500 hover:text-green-800 cursor-pointer">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>
-      <a href="./signup.html">
+      <a href="">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-10 text-white transition duration-500 hover:text-green-800 ">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -56,16 +37,20 @@
         class="p-2 w-20  text-center text-black rounded-md transition duration-500 hover:text-white hover:bg-green-800">Products</a>
       <a href="./contact.html"
         class="p-2 w-20  text-center text-black rounded-md transition duration-500 hover:text-white hover:bg-green-800">Contact</a>
-      <a href="./signup.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke-width="1.5" stroke="currentColor"
+      <a href="./signup.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-10 text-white transition duration-500 hover:text-green-800 ">
           <path stroke-linecap="round" stroke-linejoin="round"
             d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-        </svg></a>
+        </svg>
+      </a>
     </div>
 
     <div id="mobile-div"
-      class="h-svh w-2/5 flex flex-col items-center gap-3.5 fixed top-20 right-0 z-30 bg-red-200 bg-opacity-95 transform translate-x-full transition duration-500 ease-in-out p-4 lg:hidden">
+      class="bg-red-200 flex flex-col h-svh w-2/5 items-center gap-5 fixed top-20 right-0 p-4 z-30 bg-opacity-95 transform translate-x-full transition duration-500 ease-in-out md:hidden">
+      <div class="absolute right-10">
+        <p class="inline font-semibold cursor-pointer hover:text-green-800" onclick="closeup()">X</p>
+      </div>
       <a href="./index.html"
         class="p-2 w-20 text-center text-black rounded-md border border-green-800 transition duration-500 hover:text-white hover:bg-green-800 ">Home</a>
       <a href="./product.html"
@@ -186,10 +171,10 @@
   </section>
 
   <!-- Reviews Section -->
-  <section class="bg-red-300  p-3 pb-14">
+  <section class="bg-red-300 p-3 pb-14">
     <h1 class="font-bold italic text-center p-4 text-green-800 text-3xl">Customer'sz Review</h1>
     <div class="md:flex text-white">
-      <div class=" bg-neutral-500 shadow-2xl m-3 p-2 ">
+      <div class=" bg-gray-600 shadow-2xl m-3 p-2 ">
         <p>"A focus on sustainability, Universal Safe Pollution Control helps reduce harmful pollutants, contributing to
           cleaner air and a healthier ecosystem growth of these plants has been remarkable, and they’ve become the
           highlight of my home decor!."</p>
@@ -207,7 +192,7 @@
               <circle cx="12" cy="10" r="2.5" fill="#FFD1C4" />
 
               <!-- Body -->
-              <path d="M15 15c-1-1-3-1-3-1s-2 0-3 1c-1 1-2 3-2 3h10s-1-2-2-3z" fill="#FF8A80"   />
+              <path d="M15 15c-1-1-3-1-3-1s-2 0-3 1c-1 1-2 3-2 3h10s-1-2-2-3z" fill="#FF8A80" />
             </svg>
           </h2>
           <h2 class="px-4 py-4 font-extrabold text-red-300 underline">*JESSY</h2>
@@ -215,7 +200,7 @@
 
       </div>
 
-      <div class="bg-slate-500 shadow-2xl m-3 p-2">
+      <div class="bg-gray-700 shadow-2xl m-3 p-2">
         <p>"Universal Safe Pollution Control provides a reliable and efficient way to combat
           pollution, ensuring a safer, greener future for all These plants are thriving beautifully, with lush growth
           and vibrant colors truly a testament to their superior quality."</p>
@@ -233,7 +218,7 @@
               <circle cx="12" cy="10" r="2.5" fill="#FFD1C4" />
 
               <!-- Body -->
-              <path d="M15 15c-1-1-3-1-3-1s-2 0-3 1c-1 1-2 3-2 3h10s-1-2-2-3z" fill="#FF8A80"   />
+              <path d="M15 15c-1-1-3-1-3-1s-2 0-3 1c-1 1-2 3-2 3h10s-1-2-2-3z" fill="#FF8A80" />
             </svg>
           </h2>
           <h2 class="px-4 py-4 text-red-300 font-extrabold underline">*SIDDIKA</h2>
@@ -299,6 +284,8 @@
         src="./Images/top-logo.png" alt="top-logo" class="absolute right-0 bottom-0 filter brightness-200"> </p>
 
   </section>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
