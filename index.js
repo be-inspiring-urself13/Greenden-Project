@@ -1,3 +1,4 @@
+//selecting  Side Navbar, Menuicon
 function togglemenu() {
     let mobileMenu = document.getElementById("mobile-div");
     mobileMenu.classList.remove("translate-x-full");
@@ -10,3 +11,4 @@ function togglemenu() {
     mobileMenu.classList.remove("translate-x-0");
     mobileMenu.classList.add("translate-x-full");
   }
+  
